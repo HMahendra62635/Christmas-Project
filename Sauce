@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Revision for Weeks 9 to 12!</title>
+	</head>
+	<style>
+		h1 {
+			color: #ff0000;
+		}
+		h2 {
+			color: #e6ac00;
+		}
+		h3 {
+			color: #6e42f4;
+		}
+		.color {
+			color: #f45642
+		}
+	</style>
+	<h1><b><i><u> Revision for Weeks 9 to 12! </b></i></u></h1>
+	<h2>WEEK 9 - Arrays</h2>
+	<body bgcolor = "#4ddbff">
+		 ¯\_(ツ)_/¯
+	</body>
+	<h2> WEEK 10 - File Handling </h2>
+	<body> ¯\_(ツ)_/¯ </body>
+	<h2> WEEK 11 - Internal Working </h2>
+	<body>
+		<table border> 
+			<caption align = top class = "color"> How to LMC! </caption>
+			<caption align = bottom> Now that you know what you're doing go <a href = http://peterhigginson.co.uk/lmc/> "play" <a>
+			<th align = center class = "color"> Mnemonic Code </th>
+			<th align = center class = "color"> Opcode </th>
+			<th align = center class = "color"> Instruction </th>
+		<tr>
+			<td> INP </td>
+			<td> 901 </td>
+			<td> Input data. The input is loaded into the Accumulator, overwriting any value that was already there. </td>
+		</tr>
+		<tr>
+			<td> ADD </td>
+			<td> 1XX </td>
+			<td> Add data.  Add the value found in the specified memory location to the value in the accumulator. </td>
+		</tr>
+		<tr>
+			<td> SUB </td>
+			<td> 2XX </td>
+			<td> Subtract data.  Subtract the value found in the specified memory location from the value in the accumulator. </td>
+		</tr>
+		<tr>
+			<td> STA </td>
+			<td> 3XX </td>
+			<td> Store data.  Stores the contents of the Accumulator into the specified memory location. </td>
+		</tr>
+		<tr>
+			<td> LDA </td>
+			<td> 5XX </td>
+			<td> Load data.  Loads the Accumulator with the contents of the specified memory location overwriting any value that was already there. </td>
+		</tr>
+		<tr>
+			<td> BRA </td>
+			<td> 6XX </td>
+			<td> Branch always.  Branch to the given labelled instruction. </td>
+		</tr>
+		<tr>
+			<td> BRZ </td>
+			<td> 7XX </td>
+			<td> Branch if zero.  If the value in the accumulator is 0, branch to the given labelled instruction.  </td>
+		</tr>
+		<tr>
+			<td> BRP </td>
+			<td> 8XX </td>
+			<td> Branch if positive or zero.  If the value in the accumulator is zero or positive, branch to the given labelled instruction. </td>
+		</tr>
+		<tr>
+			<td> OUT </td>
+			<td> 902 </td>
+			<td> Output data.  Outputs the contents of the accumulator to the Output Box </td>
+		</tr>
+		<tr>
+			<td> HLT </td>
+			<td> HLT </td>
+			<td> Halt. Ends the program </td>
+		</tr>
+		<tr>
+			<td> DAT </td>
+			<td></td>
+			<td> Data storage. </td>
+		</tr>
+		<table>
+	</body>
+
+	<h3> The CPU Components! </h3>
+	
+	<body>
+		<img src = "C:\Users\Heer\Pictures\Components of CPU.png">
+		*Risc/Harvard has seperate ram for instructions and data and seperate buses for each - pipelining*
+	</body>
+
+	<h3> Interrupts! </h3>
+
+	<body>
+		<ul>
+			<li>Can come from software or hardware</li>
+			<li>CPU checks the interrupt line after each instruction is executed</li>
+			<li>If an interrupt is raised, the CPU suspends execution of the running program or process and disables all interrupts of a lower priority</li>
+			<li>It then puts the values of the PC and of each register onto the system stack while an Interrupt Service Routine is called to deal with the interrupt.</li>
+			<li>Depending on the type of interrupt, a particular routine will be run in order to service it.</li>
+			<li>Once the interrupt has been serviced, the original values of the registers are retrieved from the stack and the process resumes from the point that it left off.</li>
+		</ul>
+	</body>
+
+	<h3> Fetch-Decode-Execute Cycle! </h3>
+
+	<body>
+		Can you order the Fetch-Decode-Excute? Have at it then!
+
+		<ol>
+			<li>Instruction in CIR decoded by Control Unit – split into opcode and operand. If operand is an address this is copied to MAR.</li>
+			<li>Contents of MDR copied to CIR.</li>
+			<li>The instruction is carried out on the operand.</li>
+			<li>Address of next instruction copied from PC to MAR. Control Unit loads address onto address bus, sends read signal on control bus to read the instruction at the address.</li>  
+			<li>Contents of address passed on data bus to MDR. PC incremented to hold address of next instruction.</li>
+		</ol>
+
+	<form id = "F-D-EGuess">
+		Guess: <input type = "text" value = "guess here bruh">
+		<p>
+		<input type = "button" onclick = "checkFunc()" value = "submit">
+	</form>
+	<script language = "JavaScript">
+		function checkFunc() {
+			var Guess = document.getElementById("F-D-EGuess")[0].value;
+			if(Guess==45213) {
+				window.alert("GRATZ");
+			} else {
+				window.alert("YOU SUCK");
+			}
+		}
+	</script>
+	</body>
+	<h2>
+		 WEEK 12 - Html, CSS and Javascript
+	</h2>
+
+	<body> Making this webpage counts. Look at the source code or something for revision </body>
+</html>
